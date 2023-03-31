@@ -1,0 +1,90 @@
+1>Check node version and npm version in cmd
+
+node --version
+npm --version 
+
+2>Create a folder in your local directory 
+
+3>Open vs code and open that folder 
+
+4>Open terminal in VS CODE and write a command 
+npm -i init 
+
+This will ask for all the details , simply write those all and then one file will be created ,package.json.file 
+
+5>We have to install cypress 
+
+npm install cypress --save -dev
+
+6>npx cypress open --- Open the cypress in the browser 
+
+specs are called as test cases in cypress 
+
+1>npx cypress run     -- it will all the spec files present under the cypress folder in headless mode
+2>npx cypress run --headed    -->it will all the spec files present under the cypress folder in headed mode
+3>npx cypress run --spec "path of the file"  
+4>npx cypress run --headed --spec "path of the file" --browser chrome
+
+Css Locators 
+The Syntax of CSS locators are 
+
+1>.class name
+2>[attribute='value']
+
+Xpaths 
+
+XML paths that are used tp locate elements in more robust , hierarchical way as compared to CSS selectors 
+
+//tagname[@attribute='value']
+
+How to use Xpath in cypress
+
+1>npm install -d cypress-xpath
+
+2>go to command.js and write ///<reference types="cypress-xpath"/>
+
+3>go to e2e.js
+
+Assertions 
+
+Implicit - 'should'----include,equals,contain
+
+ & 'and'
+Explicit -
+
+'expect' ----BDD
+and 
+
+'assert'---TDD
+
+
+
+
+chai library 
+
+
+https://www.google.com/
+
+com--pass
+
+com1--->fail
+
+
+Alerts
+
+Simple --
+
+Confirmation 
+
+Prompt 
+
+
+
+
+
+
+
+
+
+
+

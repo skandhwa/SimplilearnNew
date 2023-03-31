@@ -1,0 +1,193 @@
+Core Java 
+
+Object and Classes 
+
+Since Java follows OOPs concept so we call it as OOP Language
+
+Class are basically a blue print or the template 
+Object are real time identity which is occupying some space and memory .
+
+There are 4 OOPs concept in java 
+
+1>Inheritance
+2>Polymorphism
+3>Abstraction 
+4>Encapsulation
+
+
+Inheritance 
+
+Inheritance is a feature of Object Oriented PL where a child class(sub class) will have the feature of its own along with some of the features adapted from the parent (super class)
+
+a>Single Inheritance
+b>Multilevel inheritance 
+c>Multiple Inheritance ----java does not directly supports , we have to use interface 
+d>Hybrid Inheritance
+
+Polymorphism (multiple forms)
+Polymorphism is a concept of OOP where a single methods can be called differently in java , by some special features .
+a>Compile time polymorphism ----Method Overloading
+b>Run time polymorphism .----Method overriding
+
+
+Abstraction 
+Abstraction is a feature of OOP where we are focused only on the functional details and we dont want to have an idea for the implementation details .
+
+a>Abstract class--- 0 to 100%
+b>Interface--100%
+
+Encapsulation 
+Encapsulation is a featureof OOP where the data and methods are being binded together in such a way that they are being protected from any kind of external hampering . 
+We can have various access modifiers to implement encapsulation . 
+Private
+Public
+Protected 
+Default 
+
+public static void main(String[] args)
+
+public --- an access modifier and once we declare this we can access it from any point of the program 
+
+static ---> if we have declared static that means we dont have to create object ,
+memory is also loaded once.
+
+main --->  main is the starting point of the program .
+
+new is a keyword in java used during time of object creation 
+
+Data Types in java  Size
+
+Inheritance 
+
+1>Single Inheritance 
+2>MultilevelInheritance
+3>Method Overloading
+4>Method Overriding
+
+
+Abstract Class
+Interface 
+Static keyword
+
+Looping
+
+if
+if else
+While 
+Do While
+for 
+for each loop 
+
+Array 
+
+Strings in Java
+String is a an Object in Java which is a collection of characters .
+
+String str="Saurabh";
+
+String 
+
+What is String
+Why Immutable
+String gets stored in Heap memory
+Methods-
+
+String Buffer class
+
+Exception handling in Java 
+
+Exception are the events which occur during the execution of the program and it disrupts the 
+normal flow of execution , 
+The process of Handling Exceptions in java is called Exception Handling 
+
+1>Compile time Exception----Checked Exception
+2>Run Time Exception -----Unchecked Exception
+
+ 
+
+
+try catch
+throw
+throws
+finally
+
+Taking input output from User
+3
+
+ScannerInput class
+BufferedReader class
+InputStream class
+
+
+Advance Java 
+
+Collections interface 
+
+Collections are basically those which are used to manipulate and store a group of objects .
+
+
+List
+ArrayList
+LinkedList
+STack
+Queue
+
+Set
+HashSet
+LinkedHashSet
+TreeSet
+
+Map
+HashMap
+LinkedHashMap
+TreeMap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

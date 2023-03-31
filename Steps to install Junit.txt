@@ -1,0 +1,4 @@
+1>Open Eclipse and create a new Java Project 
+
+2>Delete or uncheck module info.java
+

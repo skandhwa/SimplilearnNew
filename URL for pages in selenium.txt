@@ -1,0 +1,24 @@
+https://nxtgenaiacademy.com/demo-site/---for others
+
+https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm-----------for select class
+
+https://demo.automationtesting.in/Alerts.html--------------for alerts
+
+
+https://demoqa.com/droppable/----Drag and Drop 
+
+
+
+
+
+Wait<WebDriver> wait2 = new FluentWait<WebDriver>(driver)
+	    		       .withTimeout(Duration.ofSeconds(30L))
+	    		       .pollingEvery(Duration.ofSeconds(5L))
+	    		       .ignoring(NoSuchElementException.class);
+
+
+
+ WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(10))
+	    	        .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+
+
