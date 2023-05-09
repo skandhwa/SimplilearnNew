@@ -1,0 +1,46 @@
+1> Open the path of bin where Jmeter in installed
+2>Open cmd in that bin folder
+3>
+
+jmeter -f -n -t "C:\Users\saura\Downloads\Test7thMay.jmx" -l "C:\Users\saura\OneDrive\Desktop\Jmeter Software\myResult2.csv" -e -o "C:\Users\saura\OneDrive\Desktop\Jmeter Software\ResultNew2.html"
+
+
+-n means for non gui mode
+
+-t ----> path of the jmx file
+
+-l-----> the csv report will be generated in that path 
+
+-e------> to generate the HTML report
+
+-o-----> to give the path of the HTML report 
+
+-f----> for overriding 
+
+
+jmeter -f -n -t "C:\Users\saura\Downloads\Test7thMay.jmx" -l "C:\Users\saura\OneDrive\Desktop\Jmeter Software\ResultNew3.csv" -e -o "C:\Users\saura\OneDrive\Desktop\Jmeter Software\ResultNew3"
+
+
+
+Pacing -
+
+To control the ramp up and ramp down of virtual users .
+
+
+
+Download the Plugin 
+https://jmeter-plugins.org/install/Install/
+
+
+Put the plugin in the below path 
+
+C:\Users\saura\OneDrive\Desktop\Jmeter Software\apache-jmeter-5.5\apache-jmeter-5.5\lib\ext
+
+jpgc standard set
+
+
+
+
+
+
+
