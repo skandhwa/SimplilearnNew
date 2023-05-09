@@ -1,0 +1,27 @@
+SQL QUERIES
+
+
+CREATE TABLE demo.employees (
+    FirstName varchar(255),
+    LastName varchar(255),
+   
+    Address varchar(255),
+    City varchar(255)
+);
+
+
+INSERT INTO demo1.employees
+VALUES ('Saurabh','Kandhway','Tollygunge','Kolkata');
+
+
+INSERT INTO demo1.employees
+VALUES ('Manish','Malhotra','ModelTown','Delhi',30000.'Marketing');
+
+ALTER TABLE demo.employees
+ADD Salary int;
+ALTER TABLE demo.employees
+ADD Department varchar(200);
+
+Update demo.employees
+set Salary=10000  AND Department='IT'
+where FirstName='Saurabh';

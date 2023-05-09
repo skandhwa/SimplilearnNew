@@ -1,0 +1,108 @@
+Steps to Connect and Execute Queries 
+
+1> Create a new user 
+saurabh
+Kitkat@19
+
+2>Create a new database
+Create table into the database
+Insert records in the table 
+
+CREATE TABLE demo1.employees (
+    FirstName varchar(255),
+    LastName varchar(255),
+   
+    Address varchar(255),
+    City varchar(255),
+    Salary INT,
+    Department varchar(255)
+);
+
+INSERT INTO demo1.employees
+VALUES ('Saurabh','Kandhway','Tollygunge','Kolkata',20000,'HR');
+INSERT INTO demo1.employees
+VALUES ('Manish','Malhotra','ModelTown','Delhi',30000,'Marketing');
+
+select * from demo1.employees.
+
+3> Create a Java Project , Load mySQL connector into the project and go to build path and add that sql connector in that .
+
+4>*********
+
+Connect to Database 
+
+a> Load the Driver 
+
+Class.forName("com.mysql.cj.jdbc.Driver")///Fully Qualified class Name 
+
+b> Create a Connection 
+
+           Connection con=DriverManager.getConnection("jdbc:mysql//localhost:3306/demo1","saurabh","Kitkat@19");
+///Driver Manager is a class and get connection is a static method 
+
+c>Create a Query 
+
+>Statement -- for plain sql queries 
+>Prepared statement -- for complex or Dynamic queries 
+>callable statement --- for stored procedures or triggers or functions
+
+String q="select * from demo1.employees";
+
+Statement stm=con.createstatement();//when query is returning some data 
+OR
+Statement stm=con.updatestatement(q)//when query is not returning any data 
+
+d> ResultSet set=stm.executeQuery();
+
+
+e>While (set.next())
+{
+
+int id= set.getInt("StudentID");
+S.o.pln(id)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
