@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "3b998e1e-2ec1-4342-afc4-7c88e58e9721",
+		"name": "TestNew13thMay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26077521",
+		"_collection_link": "https://www.postman.com/skandhwa123/workspace/testsimplilearn/collection/26077521-3b998e1e-2ec1-4342-afc4-7c88e58e9721?action=share&creator=26077521&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var actEmail=\"michael.lawson@reqres.in\";\r",
+							"\r",
+							"pm.test(\"Validate the email ID\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.data[0].email).to.eql(actEmail);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate the Status Code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"application/json; charset=utf-8\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var random=Math.random().toString(36).substring(2,7);\r",
+							"var emailaddress=\"Test\" +random+ \"@gmail.com\";\r",
+							"\r",
+							"pm.environment.set(\"email_id\", emailaddress);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validate Status Code\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"var emailValue=pm.environment.get(\"email_id\");\r",
+							"pm.test(\"Validate The Email ID\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.email).to.eql(emailValue);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\",\r\n    \"email\":\"{{email_id}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI_R}}/api/users",
+					"host": [
+						"{{BASE_URI_R}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "ac98b068-6ffb-4ccd-9663-48657086e866",
+		"name": "TestDemoMockServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26077521",
+		"_collection_link": "https://www.postman.com/skandhwa123/workspace/testsimplilearn/collection/26077521-ac98b068-6ffb-4ccd-9663-48657086e866?action=share&creator=26077521&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "v1/home",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/v1/home",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"home"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/v1/home",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"home"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n     \"Booking_id\" :\"WRRWDSDS\"\n     \"name\": \"morp\",\n    \"job\": \"leader\",\n    \"email\":\"saurabh\",\n    \"No of Guest\":\"5\"\n    \"No of Rooms\":\"3\"\n}\n"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://c82bb08d-9981-483b-a5f8-70d251ee4333.mock.pstmn.io"
+		}
+	]
+}
