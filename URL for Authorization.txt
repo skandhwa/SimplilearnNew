@@ -1,0 +1,28 @@
+http://httpbin.org/digest-auth/undefined/saurabh/saurabh
+
+http://postman-echo.com/basic-auth----BASIC AUTHENTICATION
+
+https://gorest.co.in/public/v2/users
+
+https://openweathermap.org/current
+
+https://api.openweathermap.org/data/2.5/weather
+
+
+Types of Authentication '
+
+1> Basic Authentication 
+
+We will pass username and password 
+
+2>Digest Authentication 
+
+We will pass the digestive key to subsequent request and internally uses MD5 algorithm 
+It is secure as the hackers will not be able to see the id or password 
+he can only access the tramsactions which you have performed
+
+3>Bearer Token Authentication 
+
+
+
+
