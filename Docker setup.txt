@@ -1,0 +1,76 @@
+1> Go to https://www.docker.com/products/docker-desktop/
+Download Docker desktop
+
+2>write in run(windows+r) -->winver
+windows version should be 10 or 11 and check from documentation about the versions
+
+3>Go to Task manager and check that Virtualization is enabled
+
+
+4>Go to "Turn Windows feature off/on"
+
+5>Create a Folder in E drive and run wsl --install so that Windows Subsystem for linux gets installed
+
+
+
+6>Once docker desktop is being installed successfully run docker -v and this will show you the docker version
+
+7>Docker desktop requires a newer kernel version
+
+wsl --update
+
+8>docker run hello-world
+This will install docker helloworld and will confirm that docker is installed successfully 
+
+9>docker images 
+this will show you the list of all the images present in your machine 
+
+10>docker pull hello-world
+This will pull the image from the library and give you the latest version if already present 
+
+11> docker search MySQL
+This will search a image and give you back all the details relatively 
+
+
+12>docker ps
+This will list the containers which are as of now running 
+
+13>docker ps -a
+This will give you the list of  all the containers both in running state and exited state
+
+14>docker run --name HelloWorldContainerNew -d 9c7a54a9a43c
+
+HelloWorldContainer is any name you can give 
+-d means detach
+9c7a54a9a43c--Image ID (You will get this from docker images command)
+The container will get created and immediately it stops 
+
+
+15>docker run --name MyJunitContainer -it -d 10d06429bd6b
+This will run the image and the container will be up and running mode , this container will not get exited immediately until the user is stopping this 
+
+it meAND INTERACTIVE MODE
+d means detached 
+10d06429bd6b is the image id which you will get from docker images 
+
+16>docker exec -it f35bc2533fb8 python3
+this will help you go inside a container and execute commands accordingly
+f35bc2533fb8-- container id (you will get from docker ps)
+python3-- which version you want to use
+
+17> write ctrl+D or exit() to exit from a container 
+
+
+18>docker inspect f35bc2533fb8
+
+f35bc2533fb8--- This means container ID
+
+
+
+
+
+
+
+
+
+
