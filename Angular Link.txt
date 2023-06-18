@@ -1,0 +1,55 @@
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key |  tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ |  tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+apt-get update
+
+apt-get install jenkins
+
+
+http://13.127.12.206:8080
+
+http://13.127.12.206:8080/
+
+
+
+
+CREATE TABLE mydb.IndexExample3 (
+    Employee_ID int ,
+    EmployeeName varchar(255),
+    Address varchar(255) ,
+   Salary int
+    
+);
+
+INSERT INTO mydb.IndexExample3
+VALUES ('6789', 'Manish','Kolkata',42000);
+INSERT INTO mydb.IndexExample3
+VALUES ('2789', 'Ramesh','Hyderabad',52000);
+INSERT INTO mydb.IndexExample3
+VALUES ('1789', 'Harish','Mumbai',32000);
+INSERT INTO mydb.IndexExample3
+VALUES ('8543', 'Rohit','Delhi',152000);
+
+
+
+
+
+
+
+
+
+
+NODE INSTALLATION 
+
+
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+
+
+
+
+https://github.com/bharatht19/flightservices

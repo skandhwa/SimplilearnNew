@@ -1,0 +1,268 @@
+1> Run the ssh -i "16th_Simplilearn.pem" ubuntu@ec2-3-6-37-90.ap-south-1.compute.amazonaws.com 
+
+in the place where the Key is kept
+
+
+2>sudo -i 
+Login into EC2 instance using root user
+
+3> sudo u
+Login through a super user
+
+4>apt-get update
+This will update package instance file
+
+5>apt-get install nginx
+To install nginx we will write this 
+
+6>service nginx status
+This will tell you that nginx is active now 
+
+7>curl localhost
+
+{All the html portion of nginx will be shown}
+
+8>cd /var/www/html
+
+9> ls
+
+index.nginx-debian.html
+
+10> cat index.nginx-debian.html
+
+11>echo "Welcome to Simplilearn" >index.html
+
+
+12> curl localhost 
+
+{Welcome to Simplilearn}
+
+
+http://13.233.140.65/
+
+
+
+
+
+INSTALL JAVA INTO EC2 INSTANCE
+---------------------------------------------------------------------
+
+1>sudo su
+2>apt-get update
+3>First Check version with java -version 
+4>Run apt-get install openjdk-11-jre openjdk-11-jdk
+5> Again check version java -version
+6>jshell -----> It will open the java editor
+
+
+
+
+INSTALL MY SQL INTO EC2 Instance
+--------------------------------------------------------------------
+
+1> apt-get update 
+2>First check that whether mysql is installed or not 
+mysql --version
+
+3>apt-get install mysql-server
+Run this to get mysql installed 
+
+4> Again check the version of mysql 
+mysql --version
+
+5>Login into mysql with root user 
+mysql -u root -p
+
+It will ask for a password , give password as 
+
+---->root
+
+6>show databases
+This will give you the list of all databases which are by default present in mysql 
+
+
+7>Create a database with below command 
+
+create database mydb;
+
+8>CREATE TABLE mydb.IndexExample3 (
+    Employee_ID int ,
+    EmployeeName varchar(255),
+    Address varchar(255) ,
+   Salary int
+    
+);
+
+INSERT INTO mydb.IndexExample3
+VALUES ('6789', 'Manish','Kolkata',42000);
+INSERT INTO mydb.IndexExample3
+VALUES ('2789', 'Ramesh','Hyderabad',52000);
+INSERT INTO mydb.IndexExample3
+VALUES ('1789', 'Harish','Mumbai',32000);
+INSERT INTO mydb.IndexExample3
+VALUES ('8543', 'Rohit','Delhi',152000);
+
+
+9> select * from mydb.IndexExample3
+
+
+
+INSTALL GIT INTO EC2 Instance
+--------------------------------------------------
+
+1> apt-get update
+2>apt-get install git;
+
+try to do a git clone command
+
+INSTALL NODE JS INTO EC2 instance
+---------------------------------------------------
+1>To check the version of node js installed or not 
+
+apt policy nodejs
+
+2>apt-get update
+
+3>Install node js
+apt-get install nodejs
+
+4>To install npm 
+apt-get install npm
+
+(This will take 10 mins of time)
+
+
+
+INSTALL ANGULAR JS INTO EC2 INSTANCE
+-----------------------------------------------------
+
+1>npm install -g @angular/cli
+
+To install Angular into ec2 Instance .
+
+
+INSTALL JENKINS INTO EC2 INSTANCE
+----------------------------------------------------
+
+1>to check java version 
+java -version;
+
+2>Go to pkg.jenkins.io
+
+and go inside debian
+
+3>
+
+Run the command
+
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+    /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+
+4>echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+5> Run the below command in sequence 
+
+sudo apt-get update
+  sudo apt-get install fontconfig openjdk-11-jre
+  sudo apt-get install jenkins
+
+6>
+sudo systemctl start jenkins
+
+sudo systemctl enable jenkins
+
+sudo systemctl status jenkins
+
+
+7> Create a security group with SSH ,TCP,HTTP and attach them to ec2 instance
+
+8> To put the password 
+
+sudo cat /var/lib/jenkins/secret/initialadminpassword
+
+
+INSTALL MAVEN 
+-------------------------
+
+apt-get update
+
+apt-get install maven 
+
+
+
+
+Angular Project Deploying in AWS
+
+
+1>create an angular project
+2>Enable static hosting 
+3> Update the permission in the bucket policy
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::simplilearnangularproject/*"
+        }
+    ]
+}
+
+
+4> After this build the angular project 
+
+ng build 
+
+5>copy all the files from dist folder and upload in aws s3 bucket 
+
+6>open the link and check that angular project is deployed 
+
+
+
+
+
+
+
+Setting Up Angular Project 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
