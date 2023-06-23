@@ -1,0 +1,162 @@
+Steps for Executing Jenkins Through Docker 
+-------------------------------------------------
+
+1> docker volume 
+This command will give you the help required for docker
+
+2>docker volume create myvol2
+This will create a docker volume where you are going to use this
+
+3> docker volume ls
+It gives the list of docker volume running
+
+4>docker volume inspect myvol2
+We can inspect the docker volume through this 
+
+5>docker pull jenkins/jenkins:lts
+This will pull the jenkins into your docker instance 
+
+6>docker run --name myjenkins2 -v myvol2 -p 9094:8080 -p 60000:50000 jenkins/jenkins:lts
+This will run the docker on a specific port as given in command 
+
+
+
+
+Steps to Contarize AngularApplication Using Docker 
+-----------------------------------------------------------
+
+1> Create an angular project 
+ng new mydemoapp
+
+2>Open the angular project in vs code
+
+3> run ng serve and check the project is running properly or not 
+
+4> run ng build to create  a dist folder to build the project 
+
+
+5> Create a docker file 
+
+
+#stage 1
+FROM node:latest as build 
+WORKDIR /usr/local/app  
+COPY . /usr/local/app
+RUN npm install
+RUN npm run build
+
+#stage2
+
+FROM nginx:latest 
+
+COPY --from=build  /usr/local/app/dist/mydemoapp /usr/share/nginx/html
+
+EXPOSE 8080
+
+
+
+
+
+Run the below 
+
+
+ docker build --pull --rm -f "Dockerfile" -t mydemoapp:latest "." 
+
+
+
+
+
+Jenkins
+--------------------------------
+
+1> On which port jenkins run
+
+2>Cron pattern in jenkins 
+
+3>How will you add a user in jenkins
+
+4>What is CI /CD /CT
+
+5>Which language to use in jenkins file
+
+6>What are types of pipeline in jenkins
+
+7>Wht is Poll SCM in jenkins
+
+8>Wht is Global tool configuration 
+
+9>How to trigger build remotely ?
+
+10>Git hub hook trigger for GIT SCM polling
+
+11>What is jenkins variable ?
+
+12>What is paramerized job in jenkins 
+
+13> How can you create a parametrized job 
+
+14>Suppose a project is present in GIt how will you run that project from jenkins 
+
+15>How will you create a jenkins file 
+
+16>how to pass parameters from maven directly 
+
+17> What are the stages on declarative pipeline 
+
+
+Docker 
+-------------------------
+
+1>What is a docker 
+
+2>What is the architecture of docker
+
+3> What is docker file, docker image and docker container
+
+4>different command in docker 
+
+5> How to build a docker file
+6> how to pull a docker image 
+7> what is docker hub
+8> how to push a image to docker hub 
+9>how to run a docker image to get a docker container
+
+10 >docker process status 
+11>how to run a docker container in an interactivve mode 
+12>how to restart a docker container , login to docker hub , stop a container 
+13> How to contarize a java application ,mysql ,python 
+14> how to contarize angular application , spring boot application 
+
+
+AWS 
+---------------------------------------------
+
+1> What is Cloud computing 
+2> IAAS ,PAAS ,SAAS
+
+3> Avalaibility zones , regions , echo points 
+
+4> what is EC2 
+5> How to create an EC2
+6> How to create a Remote desktop
+7> what is security group
+8> how to configure 
+9> Ports for SSH , HTTP,TCP
+10 > How to configure Anguar Application on Ec2 
+11>what is bootstrap scripting 
+12> how to configure storage 
+13> how to install and use nginx
+14> how to host a static website using aws s3 storage 
+
+
+
+
+
+
+
+
+
+
+
+
+
